@@ -59,7 +59,7 @@ const Quiz = () => {
                     <div className='p-5 flex flex-col gap-4'>
                         <h1>6. In which condition is the React.js Lifecycle method static getDerivedSateFromProps(props, state) is called?</h1>
                         <QuizOption option='A' text='When the state of the component is updated' />
-                        <QuizOption option='B' text='When the state of the component is updated' />
+                        <QuizOption active option='B' text='When the state of the component is updated' />
                         <QuizOption option='C' text='When the state of the component is updated' />
                         <QuizOption option='D' text='When the state of the component is updated' />
                     </div>
