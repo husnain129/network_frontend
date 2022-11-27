@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import Footer from "../Components/Footer";
 
 const Home = () => {
@@ -217,6 +217,7 @@ const Home = () => {
                             pagination={{
                                 clickable: true,
                             }}
+                            autoplay={true}
                             breakpoints={{
                                 // when window width is >= 640px
                                 640: {
@@ -231,7 +232,7 @@ const Home = () => {
                                     slidesPerView: 3,
                                 },
                             }}
-                            modules={[Pagination]}
+                            modules={[Pagination,Autoplay]}
                             className="mySwiper"
                         >
                             {
