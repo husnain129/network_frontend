@@ -159,7 +159,7 @@ const Home = () => {
                                     return <div className='rounded-lg bg-[url("https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] min-h-[20rem] relative overflow-hidden rated_p'>
                                         <div className='bg-[#000000A6] p-5 flex flex-col text-white h-full text-left gap-4 rated'>
                                             <div>
-                                                <h1 className='text-2xl font-bold'>Humayun Jawad</h1>
+                                                <h1 className='text-2xl font-bold'>Anad Shafi</h1>
                                                 <p className='text-sm opacity-75'>Senior Front End Developer</p>
                                             </div>
                                             <p className='text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.ectetur adipisicing elit. Deleniti ut velit voluptas, blanditiis illo, eaque sit oit, amet consectetur adipisicing elit.ectetur adipisicing elit. Deleniti ut velit voluptas, blanditiis illo, eaque sit obcaecati laudantium vel aperiam debitis quaedipisicing elit. Deleniti ut velit voluptas, blanditiis illo, eaque sit obcaecati laudantium vel aperiam debitis quaerat?</p>

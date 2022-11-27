@@ -13,7 +13,7 @@ const Verify = () => {
             <Header />
             <div className='my-[3rem]'>
                 <div className='text-center flex flex-col gap-3'>
-                    <h1 className='text-2xl font-semibold'>Apply Job</h1>
+                    <h1 className='text-2xl font-semibold'>Verify Your Account</h1>
                     <p className='text-[#7B7B7B] text-sm'>
                         Lorem Ipsum is simply dummy text of the printing
                         <br className='hidden md:block' />

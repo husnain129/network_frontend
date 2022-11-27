@@ -31,7 +31,9 @@ const Register = () => {
                 <label className='text-sm' htmlFor="terms">I agree to all <span className='font-semibold'>terms & conditions</span></label>
               </div>
             </div>
-            <button className='py-4 text-white bg-[#248489] rounded-md'>Sign Up</button>
+            <button className='py-4 text-white bg-[#248489] rounded-md' onClick={() => {
+              navigte('/home')
+            }}>Sign Up</button>
             <div className='flex items-center gap-4'>
               <div className='border border-[#E4EBF3] flex-1'></div>
               <span className='text-[#8D93A1]'>Or sign up with</span>

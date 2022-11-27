@@ -447,3 +447,7 @@ div[class$='-control'] {
 .description-css ul {
     @apply list-inside list-disc
 }
+
+.ck-editor__editable {
+    min-height: 200px !important;
+}

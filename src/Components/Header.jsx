@@ -56,7 +56,9 @@ const Header = () => {
                                             <Svgs.Editprofile />
                                             <p>Edit Profile</p>
                                         </div>
-                                        <div className='flex items-center gap-3 py-2 hover-dropdown'>
+                                        <div className='flex items-center gap-3 py-2 hover-dropdown' onClick={() => {
+                                            navigate('/my-jobs')
+                                        }}>
                                             <Svgs.Jobs />
                                             <p>My Jobs</p>
                                         </div>

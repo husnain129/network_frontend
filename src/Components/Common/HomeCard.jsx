@@ -6,7 +6,7 @@ const HomeCard = (props) => {
     const navigate = useNavigate();
     return (
         <div onClick={() => {
-            props.trending && navigate('/course-detail')
+            props.trending ? navigate('/course-detail') : navigate('/detail')
         }} className={`${props.trending ? 'p-[0.6rem]' : ''} cursor-pointer rounded-lg card-shadow max-w-[25rem] mx-auto`}>
             <div className='relative'>
                 <img src={props.img ? `${process.env.PUBLIC_URL}${props.img}` : 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'} className={`${props.trending ? 'rounded-t-lg' : ''} h-[15rem] w-full object-cover object-top`} />

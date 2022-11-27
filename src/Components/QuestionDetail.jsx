@@ -74,8 +74,7 @@ const QuestionDetail = () => {
                     </div>
                 </div>
 
-                <FormInput placeholder={'Write Your Reply'} />
-                <FormDescription />
+                <FormDescription placeholder={'Enter Reply'} title='Write Your Reply' />
                 <div className='flex items-center justify-end'>
                     <Button text='Post Answer' className='font-semibold' />
                 </div>

@@ -23,7 +23,9 @@ const Login = () => {
                             <Input placeholder='example@email.com' label='Email Address' />
                             <Input type='password' placeholder='8+ strong character' label='Password' />
                         </div>
-                        <button className='py-4 text-white bg-[#248489] rounded-md'>Login</button>
+                        <button className='py-3 text-white bg-[#248489] rounded-md' onClick={()=>{
+                            navigte('/home')
+                        }}>Login</button>
                     </div>
                 </>
             }

@@ -118,7 +118,7 @@ const Detail = () => {
                                 <img src="https://loremflickr.com/400/400" className="h-[4rem] w-[4rem] object-cover rounded-full" />
                             </div>
                             <div className='flex flex-col gap-1 justify-center'>
-                                <h1 className='text-white text-xl'>Humayun Jawad</h1>
+                                <h1 className='text-white text-xl'>Anad Shafi</h1>
                                 <p className='text-[#C3C2C2] text-sm'>Member since Jan 2022</p>
                             </div>
                         </div>
