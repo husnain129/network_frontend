@@ -31,12 +31,14 @@ const Header = () => {
                             <Svgs.HamburgerMenu />
                         </div>
 
-                        <div className='flex items-center gap-2 relative' onClick={() => { setDropdown(!dropdown) }}>
+                        <div className='flex items-center gap-2 relative'>
                             <img onClick={()=>{
                                 navigate('/profile')
                             }} src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="h-[2.8rem] w-[2.8rem] rounded-full cursor-pointer" />
-                            <h2 className='font-semibold lg:block hidden cursor-pointer'>Anas Shafi</h2>
-                            <div className='cursor-pointer'><Svgs.DownArrow /></div>
+                            <h2 onClick={()=>{
+                                navigate('/profile')
+                            }} className='font-semibold lg:block hidden cursor-pointer'>Anas Shafi</h2>
+                            <div className='cursor-pointer' onClick={() => { setDropdown(!dropdown) }}><Svgs.DownArrow /></div>
                             {
                                 dropdown && <div className='absolute top-full rounded-lg right-0 w-[17rem] shadow-lg bg-white'>
                                     <div className='p-3'>
