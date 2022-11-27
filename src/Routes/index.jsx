@@ -17,6 +17,7 @@ import QuestionDetail from '../Components/QuestionDetail.jsx';
 import AskQuestion from '../Components/AskQuestion.jsx';
 import MyJobs from '../Components/MyJobs.jsx';
 import Verify from '../Components/Verify.jsx';
+import Quiz from '../Components/Quiz.jsx';
 
 const RoutesList = () => {
     return (
@@ -39,8 +40,9 @@ const RoutesList = () => {
                 <Route path="/ask-question" element={<AskQuestion />} />
                 <Route path="/my-jobs" element={<MyJobs />} />
                 <Route path="/verify" element={<Verify />} />
+                <Route path="/quiz" element={<Quiz />} />
 
-                <Route path="*" element={<Navigate to={"/login"} />} />
+                <Route path="*" element={<Navigate to={"/home"} />} />
             </Routes>
         </BrowserRouter>
     )

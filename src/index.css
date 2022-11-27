@@ -303,6 +303,12 @@ input:-webkit-autofill:active {
     background-image: url('../public/assets/images/started_pattern.png');
 }
 
+.bg-sprinkle {
+    background-image: url('../public/assets/images/sprinkle.png');
+    background-size: cover;
+    background-position: center;
+}
+
 .bg-started {
     height: 16rem;
     overflow: hidden;

@@ -6,6 +6,8 @@ import Svgs from './Svgs';
 const Header = () => {
     const navigate = useNavigate();
     const [dropdown, setDropdown] = useState(false);
+    const [dropdownUpload, setDropdownUpload] = useState(false);
+
     const [mobileMenu, setMobileMenu] = useState(false)
     return (
         <div className='w-full sticky top-0 bg-white z-[100] shadow-md'>
@@ -17,7 +19,7 @@ const Header = () => {
                         }} />
                         <div
                             className={`lg:flex hidden items-center gap-4 text-sm nav-bar-menu ${mobileMenu ? 'nav-toggle' : ''}`}>
-                            <p>Discover</p>
+                            <p onClick={() => { navigate('/home') }}>Discover</p>
                             <p onClick={() => { navigate('/find-work') }}>Find Work</p>
                             <p onClick={() => { navigate('/hire-developers') }}>Hire Developers</p>
                             <p onClick={() => { navigate('/courses') }}>Courses</p>
@@ -77,17 +79,36 @@ const Header = () => {
 
                         {/* <button className='px-4 py-2 border border-transparent hover:border-gray-500 text-sm rounded-md' onClick={() => { navigate('/login') }}>Sign In</button> */}
 
-                        <Button onClick={() => { navigate('/register') }} text={
-                            <div className='flex items-center gap-2'>
-                                Upload
-                                <span>
-                                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1.08789L5.84239 5.7897L10.6848 1.08789" stroke="white" stroke-width="1.29347" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </span>
+                        <div className='flex items-center gap-2 relative' onClick={() => { setDropdownUpload(!dropdownUpload) }}>
+                            <div className='px-4 py-3 bg-[#248489] text-white rounded-lg flex items-center gap-1'>
+                                <h2 className='font-semibold lg:block hidden cursor-pointer text-sm'>Upload</h2>
+                                <div className='cursor-pointer'><Svgs.DownArrow fill='white' /></div>
                             </div>
-                        } />
+                            {
+                                dropdownUpload && <div className='absolute top-full rounded-lg right-0 w-[12rem] shadow-lg bg-white'>
+                                    <div className='p-3 text-[#8E8E8E] text-sm'>
+                                        <div className='flex items-center gap-3 py-2 hover-dropdown' onClick={() => {
+                                            navigate('/upload-portfolio')
+                                        }}>
+                                            <Svgs.Editprofile />
+                                            <p>Add Portfolio</p>
+                                        </div>
+                                        <div className='flex items-center gap-3 py-2 hover-dropdown' onClick={() => {
+                                            navigate('/create-job')
+                                        }}>
+                                            <Svgs.Jobs />
+                                            <p>Post Job</p>
+                                        </div>
+                                        <div className='flex items-center gap-3 py-2 hover-dropdown' onClick={() => {
+                                            navigate('/ask-question')
+                                        }}>
+                                            <Svgs.Learning />
+                                            <p>Ask Question</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
