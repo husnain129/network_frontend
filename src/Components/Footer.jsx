@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from './Button'
-import SimpleInput from './SimpleInput'
+import Button from './Common/Button'
+import SimpleInput from './Common/SimpleInput'
 import Svgs from './Svgs'
 
 const Footer = () => {

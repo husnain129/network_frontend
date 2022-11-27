@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import Button from '../Components/Button'
+import Button from '../Components/Common/Button'
 import Header from '../Components/Header'
-import HomeCard from '../Components/HomeCard'
-import SimpleInput from '../Components/SimpleInput'
+import HomeCard from "../Components/Common/HomeCard";
+import SimpleInput from '../Components/Common/SimpleInput'
 import Svgs from '../Components/Svgs'
 
 // Import Swiper React components

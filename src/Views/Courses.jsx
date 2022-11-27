@@ -1,5 +1,5 @@
-import React from 'react'
-import Button from '../Components/Button'
+import React, { useRef } from 'react'
+import Button from '../Components/Common/Button'
 import Header from '../Components/Header'
 import Svgs from '../Components/Svgs'
 import CoursesSpecs from '../Components/Courses/CoursesSpecs';
@@ -8,14 +8,17 @@ import CoursesSpecs from '../Components/Courses/CoursesSpecs';
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import { Pagination, Autoplay } from "swiper";
-
 // Import Swiper styles
 import "swiper/css";
-import HomeCard from '../Components/HomeCard';
+import HomeCard from '../Components/Common/HomeCard';
+
+import Footer from '../Components/Footer'
+
 
 
 
 const Courses = () => {
+
     return (
         <>
             <Header />
@@ -23,7 +26,6 @@ const Courses = () => {
                 <div className='container mx-auto h-full w-[90%] flex items-center'>
                     <Swiper
                         spaceBetween={30}
-                        navigation={true}
                         autoplay={{
                             delay: 2000,
                             disableOnInteraction: false,
@@ -134,6 +136,110 @@ const Courses = () => {
                     </div>
                 </div>
             </div>
+            <div className='bg-[#FAFAFA]'>
+                <div className='container py-[5rem]'>
+                    <h1 className='font-semibold text-xl mb-[1.2rem]'>What our students have to say</h1>
+                    <Swiper
+                        className='testimonials' slidesPerView={3} spaceBetween={20}>
+                        <SwiperSlide>
+                            <div className='bg-white p-[2rem] rounded flex flex-col justify-between gap-[2rem]'>
+                                <p className='text-[#757575]'>Digistudi prepare people to carry out skills in the real world. Keep up the good work. What I have learned in this course, I will be able to apply in the real world.</p>
+                                <div className='flex flex-col gap-3'>
+                                    <div className='h-[2px] w-[2rem] rounded-lg bg-[#E9E9E9]'></div>
+                                    <div>
+                                        <h1 className='font-semibold text-lg'>Anas Shafi</h1>
+                                        <p className='text-[#757575]'>Lahore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className='bg-white p-[2rem] rounded flex flex-col justify-between gap-[2rem]'>
+                                <p className='text-[#757575]'>Digistudi prepare people to carry out skills in the real world. Keep up the good work. What I have learned in this course, I will be able to apply in the real world.</p>
+                                <div className='flex flex-col gap-3'>
+                                    <div className='h-[2px] w-[2rem] rounded-lg bg-[#E9E9E9]'></div>
+                                    <div>
+                                        <h1 className='font-semibold text-lg'>Anas Shafi</h1>
+                                        <p className='text-[#757575]'>Lahore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className='bg-white p-[2rem] rounded flex flex-col justify-between gap-[2rem]'>
+                                <p className='text-[#757575]'>Digistudi prepare people to carry out skills in the real world. Keep up the good work. What I have learned in this course, I will be able to apply in the real world.</p>
+                                <div className='flex flex-col gap-3'>
+                                    <div className='h-[2px] w-[2rem] rounded-lg bg-[#E9E9E9]'></div>
+                                    <div>
+                                        <h1 className='font-semibold text-lg'>Anas Shafi</h1>
+                                        <p className='text-[#757575]'>Lahore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className='bg-white p-[2rem] rounded flex flex-col justify-between gap-[2rem]'>
+                                <p className='text-[#757575]'>Digistudi prepare people to carry out skills in the real world. Keep up the good work. What I have learned in this course, I will be able to apply in the real world.</p>
+                                <div className='flex flex-col gap-3'>
+                                    <div className='h-[2px] w-[2rem] rounded-lg bg-[#E9E9E9]'></div>
+                                    <div>
+                                        <h1 className='font-semibold text-lg'>Anas Shafi</h1>
+                                        <p className='text-[#757575]'>Lahore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </div>
+            <section>
+            <div className='my-[2rem] container'>
+                <h2 className='text-center font-semibold text-[2.4rem]'>Our Latest Blogs</h2>
+                <div className='py-[2rem] blogs-slider'>
+                    <Swiper
+                        spaceBetween={20}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        breakpoints={{
+                            // when window width is >= 640px
+                            640: {
+                                slidesPerView: 1,
+                            },
+                            // when window width is >= 768px
+                            768: {
+                                slidesPerView: 2,
+                            },
+
+                            1024: {
+                                slidesPerView: 3,
+                            },
+                        }}
+                        modules={[Pagination]}
+                        className="mySwiper"
+                    >
+                        {
+                            [1, 11, , 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1,].map(ele => {
+                                return <SwiperSlide>
+                                    <div className='rounded-lg bg-[url("https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] min-h-[25rem] h-full relative overflow-hidden'>
+                                        <div className='bg-[#00000079] w-full absolute p-5 flex flex-col text-white h-full text-left gap-4'>
+                                            <div className="absolute bottom-5 left-5 right-5 flex flex-col gap-2">
+                                                <p className="text-xs">18 Jun 2022</p>
+                                                <h2 className="font-semibold text-xl">Mobile App development Life Cycle
+                                                    <br className="hidden lg:block" />
+                                                    Steps</h2>
+                                                <p className="text-[#02FCFC] text-sm">Learn More</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            })
+                        }
+                    </Swiper>
+                </div>
+            </div>
+        </section>
+        <Footer />
         </>
     )
 }

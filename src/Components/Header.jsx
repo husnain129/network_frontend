@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Button from './Button'
+import Button from './Common/Button'
 import { useNavigate } from 'react-router-dom'
 import Svgs from './Svgs';
 
@@ -12,14 +12,16 @@ const Header = () => {
             <div className='container py-[1.5rem]'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-[2rem]'>
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} className="lg:w-auto w-[70%]" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} className="lg:w-auto w-[70%] cursor-pointer" onClick={() => {
+                            navigate('/home')
+                        }} />
                         <div
                             className={`lg:flex hidden items-center gap-4 text-sm nav-bar-menu ${mobileMenu ? 'nav-toggle' : ''}`}>
                             <p>Discover</p>
-                            <p>Find Work</p>
-                            <p>Hire Developers</p>
-                            <p onClick={() => {navigate('/courses') }}>Courses</p>
-                            <p>Community</p>
+                            <p onClick={() => { navigate('/find-work') }}>Find Work</p>
+                            <p onClick={() => { navigate('/hire-developers') }}>Hire Developers</p>
+                            <p onClick={() => { navigate('/courses') }}>Courses</p>
+                            <p onClick={() => { navigate('/community') }}>Community</p>
                         </div>
                     </div>
                     <div className='flex items-center gap-5 lg:w-auto w-full'>
@@ -38,7 +40,9 @@ const Header = () => {
                                             <div className='h-[3rem] w-[3rem] bg-[#80888E] rounded-full flex items-center justify-center'>
                                                 <Svgs.Crown />
                                             </div>
-                                            <div className=''>
+                                            <div className='cursor-pointer' onClick={() => {
+                                                navigate('/verify')
+                                            }}>
                                                 <h2 className='text-sm font-semibold'>Limited Account</h2>
                                                 <p className='text-xs underline'>Upgrade Now</p>
                                             </div>
@@ -73,7 +77,17 @@ const Header = () => {
 
                         {/* <button className='px-4 py-2 border border-transparent hover:border-gray-500 text-sm rounded-md' onClick={() => { navigate('/login') }}>Sign In</button> */}
 
-                        <Button onClick={() => { navigate('/register') }} text='Upload' />
+                        <Button onClick={() => { navigate('/register') }} text={
+                            <div className='flex items-center gap-2'>
+                                Upload
+                                <span>
+                                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1.08789L5.84239 5.7897L10.6848 1.08789" stroke="white" stroke-width="1.29347" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+                            </div>
+                        } />
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ const Input = (props) => {
             <input
                 type={props.type ? props.type : 'text'}
                 id="floating_outlined"
-                className="block border px-2.5 pb-2.5 pt-4 transition-all w-full text-sm placeholder:text-xs text-gray-900 bg-transparent rounded-md border-[#E4EBF3] appearance-none outline-none focus:border-[#35424B] peer"
+                className={`block border px-2.5 pb-2.5 pt-4 transition-all w-full text-sm placeholder:text-xs text-gray-900 bg-transparent rounded-md border-[#E4EBF3] appearance-none outline-none focus:border-[#35424B] peer ${props.className}`}
                 placeholder={props.placeholder} />
 
             <label

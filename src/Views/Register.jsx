@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Input from '../Components/Input'
 import OnBoarding from '../Components/OnBoarding'
-import PhoneInput from '../Components/PhoneInput'
+import PhoneInput from '../Components/Common/PhoneInput'
 import Svgs from '../Components/Svgs'
 
 const Register = () => {
