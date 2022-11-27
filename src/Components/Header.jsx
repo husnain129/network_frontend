@@ -32,7 +32,9 @@ const Header = () => {
                         </div>
 
                         <div className='flex items-center gap-2 relative' onClick={() => { setDropdown(!dropdown) }}>
-                            <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="h-[2.8rem] w-[2.8rem] rounded-full cursor-pointer" />
+                            <img onClick={()=>{
+                                navigate('/profile')
+                            }} src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="h-[2.8rem] w-[2.8rem] rounded-full cursor-pointer" />
                             <h2 className='font-semibold lg:block hidden cursor-pointer'>Anas Shafi</h2>
                             <div className='cursor-pointer'><Svgs.DownArrow /></div>
                             {
