@@ -58,7 +58,7 @@ const Register = () => {
           <h1 className='text-white font-bold text-[3rem]'>
             Welcome to{' '}
             <br className='hidden lg:block' />
-            Network
+            Nework
           </h1>
           <p className='text-white'>
             Let's get you all set up so you can verify your personal
