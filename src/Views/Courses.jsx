@@ -98,7 +98,7 @@ const Courses = () => {
                 </div>
             </div>
             <div className='bg-[#FAFAFA] py-[2rem]'>
-                <div className='container flex items-center justify-around gap-5'>
+                <div className='container flex items-center justify-start lg:justify-around gap-5 flex-wrap'>
                     <CoursesSpecs icon={<Svgs.Anytime />} title='Learn Anytime' desc='Learn and Repeat anytime you want' />
                     <CoursesSpecs icon={<Svgs.Improve />} title='Improve Skills' desc='Online Courses to Improve Your Technical Skills ' />
                     <CoursesSpecs icon={<Svgs.Experience />} title='Experienced Instructo' desc='Learn from top Experienced Instructor' />
@@ -119,8 +119,8 @@ const Courses = () => {
                 </div>
             </div>
             <div className='container'>
-                <div className='bg-[#35424b] bg-started started-bg bg-no-repeat'>
-                    <div className='flex gap-6 justify-between h-full relative z-[2]'>
+                <div className='bg-[#35424b] p-3 min-h-[16rem] bg-started started-bg bg-no-repeat'>
+                    <div className='flex gap-6 justify-between flex-wrap h-full relative z-[2]'>
                         <div className='flex flex-col gap-3 p-[2rem] justify-center'>
                             <h1 className='text-white text-[2.4rem]'>Join World's Leading Web & App Dev Community</h1>
                             <p className='text-white/70'>Millions of Web and App developers around the world showcase their portfolio work on Nework</p>
@@ -140,7 +140,19 @@ const Courses = () => {
                 <div className='container py-[5rem]'>
                     <h1 className='font-semibold text-xl mb-[1.2rem]'>What our students have to say</h1>
                     <Swiper
-                        className='testimonials' slidesPerView={3} spaceBetween={20}>
+                        className='testimonials' breakpoints={
+                            {
+                                640: {
+                                    slidesPerView: 1,
+                                },// when window width is >= 768px
+                                1024: {
+                                    slidesPerView: 2,
+                                },
+                                1200: {
+                                    slidesPerView: 3,
+                                },
+                            }
+                        } spaceBetween={20}>
                         <SwiperSlide>
                             <div className='bg-white p-[2rem] rounded flex flex-col justify-between gap-[2rem]'>
                                 <p className='text-[#757575]'>Digistudi prepare people to carry out skills in the real world. Keep up the good work. What I have learned in this course, I will be able to apply in the real world.</p>
@@ -193,53 +205,53 @@ const Courses = () => {
                 </div>
             </div>
             <section>
-            <div className='my-[2rem] container'>
-                <h2 className='text-center font-semibold text-[2.4rem]'>Our Latest Blogs</h2>
-                <div className='py-[2rem] blogs-slider'>
-                    <Swiper
-                        spaceBetween={20}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        breakpoints={{
-                            // when window width is >= 640px
-                            640: {
-                                slidesPerView: 1,
-                            },
-                            // when window width is >= 768px
-                            768: {
-                                slidesPerView: 2,
-                            },
+                <div className='my-[2rem] container'>
+                    <h2 className='text-center font-semibold text-[2.4rem]'>Our Latest Blogs</h2>
+                    <div className='py-[2rem] blogs-slider'>
+                        <Swiper
+                            spaceBetween={20}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            breakpoints={{
+                                // when window width is >= 640px
+                                640: {
+                                    slidesPerView: 1,
+                                },
+                                // when window width is >= 768px
+                                768: {
+                                    slidesPerView: 2,
+                                },
 
-                            1024: {
-                                slidesPerView: 3,
-                            },
-                        }}
-                        modules={[Pagination]}
-                        className="mySwiper"
-                    >
-                        {
-                            [1, 11, , 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1,].map(ele => {
-                                return <SwiperSlide>
-                                    <div className='rounded-lg bg-[url("https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] min-h-[25rem] h-full relative overflow-hidden'>
-                                        <div className='bg-[#00000079] w-full absolute p-5 flex flex-col text-white h-full text-left gap-4'>
-                                            <div className="absolute bottom-5 left-5 right-5 flex flex-col gap-2">
-                                                <p className="text-xs">18 Jun 2022</p>
-                                                <h2 className="font-semibold text-xl">Mobile App development Life Cycle
-                                                    <br className="hidden lg:block" />
-                                                    Steps</h2>
-                                                <p className="text-[#02FCFC] text-sm">Learn More</p>
+                                1024: {
+                                    slidesPerView: 3,
+                                },
+                            }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                        >
+                            {
+                                [1, 11, , 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1,].map(ele => {
+                                    return <SwiperSlide>
+                                        <div className='rounded-lg bg-[url("https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] min-h-[25rem] h-full relative overflow-hidden'>
+                                            <div className='bg-[#00000079] w-full absolute p-5 flex flex-col text-white h-full text-left gap-4'>
+                                                <div className="absolute bottom-5 left-5 right-5 flex flex-col gap-2">
+                                                    <p className="text-xs">18 Jun 2022</p>
+                                                    <h2 className="font-semibold text-xl">Mobile App development Life Cycle
+                                                        <br className="hidden lg:block" />
+                                                        Steps</h2>
+                                                    <p className="text-[#02FCFC] text-sm">Learn More</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
-                            })
-                        }
-                    </Swiper>
+                                    </SwiperSlide>
+                                })
+                            }
+                        </Swiper>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <Footer />
+            </section>
+            <Footer />
         </>
     )
 }

@@ -69,7 +69,8 @@ input:-webkit-autofill:active {
     transition-duration: 0.3s;
 }
 
-.nav-bar-menu>p:hover {
+.nav-bar-menu>p:hover,
+.nav-bar-menu .active {
     color: #248489;
     font-weight: bold;
     cursor: pointer;
@@ -189,7 +190,21 @@ input:-webkit-autofill:active {
 
 @media screen and (max-width:640px) {
     :root {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    div[class$=-indicatorContainer] {
+        padding: 0.2rem;
+    }
+
+    .nav-bar-menu .active {
+        color: white;
+    }
+    .course-bg{
+        background-position: right !important;
+    }
+    .bg-started::after {
+        display: none;
     }
 }
 
@@ -310,7 +325,6 @@ input:-webkit-autofill:active {
 }
 
 .bg-started {
-    height: 16rem;
     overflow: hidden;
     position: relative;
 }
@@ -450,4 +464,11 @@ div[class$='-control'] {
 
 .ck-editor__editable {
     min-height: 200px !important;
+}
+
+.bg-discover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/assets/images/discover-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

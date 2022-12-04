@@ -14,7 +14,7 @@ const Quiz = () => {
             <Header />
             <div className='container flex flex-col gap-6 py-[2rem]'>
                 <div className='w-[80%] mx-auto border rounded-lg pb-[1rem]'>
-                    <div className='flex items-center gap-4 justify-between p-5'>
+                    <div className='flex items-center gap-4 justify-between p-5 flex-wrap'>
                         <div className='flex items-center gap-4'>
                             <Svgs.Flutter size='38' />
                             <div>
@@ -34,7 +34,7 @@ const Quiz = () => {
                             <h1><span className='text-xl text-[#248489]'>25</span> Mins</h1>
                         </div>
                     </div>
-                    <div className='flex items-center justify-around gap-4 bg-[#F2F8FA] text-[#7B7B7B] px-4 py-3'>
+                    <div className='flex items-center lg:justify-around justify-start gap-4 bg-[#F2F8FA] text-[#7B7B7B] px-4 py-3 overflow-auto'>
                         <p className='text-[#248489]'>1</p>
                         <p>2</p>
                         <p>3</p>

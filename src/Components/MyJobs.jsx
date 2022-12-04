@@ -9,7 +9,7 @@ const MyJobs = () => {
         <>
             <Header />
             <div className='container py-[2rem] pt-[5rem] overflow-hidden'>
-                <div className='border w-fit mx-auto px-[2rem] py-[0.5rem] rounded-md flex items-center gap-[3rem] text-lg text-[#35424B] lg:justify-center overflow-auto whitespace-nowrap'>
+                <div className='border w-fit mx-auto px-[2rem] py-[0.5rem] rounded-md flex items-center gap-5 lg:gap-[3rem] text-lg text-[#35424B] justify-center overflow-auto whitespace-nowrap flex-wrap'>
                     <p className={`cursor-pointer ${HomeSection == "All" && "text-[#248489]"}`} onClick={() => { setHomeSection('All') }}>Applied Jobs</p>
                     <p className={`cursor-pointer ${HomeSection == "Mobile" && "text-[#248489]"}`} onClick={() => { setHomeSection('Mobile') }}>Posted Jobs</p>
                     <p className={`cursor-pointer ${HomeSection == "Website" && "text-[#248489]"}`} onClick={() => { setHomeSection('Website') }}>

@@ -18,6 +18,9 @@ import AskQuestion from '../Components/AskQuestion.jsx';
 import MyJobs from '../Components/MyJobs.jsx';
 import Verify from '../Components/Verify.jsx';
 import Quiz from '../Components/Quiz.jsx';
+import ScrollToTop from '../Components/Common/ScrollToTop';
+import Discover from '../Components/Discover';
+import EditProfile from '../Views/EditProfile';
 
 const RoutesList = () => {
     return (
@@ -29,6 +32,7 @@ const RoutesList = () => {
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/course-detail" element={<CourseDetail />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/edit-profile" element={<EditProfile />} />
                 <Route path="/detail" element={<Detail />} />
                 <Route path="/find-work" element={<FindWork />} />
                 <Route path="/hire-developers" element={<HireDevelopers />} />
@@ -41,9 +45,11 @@ const RoutesList = () => {
                 <Route path="/my-jobs" element={<MyJobs />} />
                 <Route path="/verify" element={<Verify />} />
                 <Route path="/quiz" element={<Quiz />} />
+                <Route path="/discover" element={<Discover />} />
 
                 <Route path="*" element={<Navigate to={"/home"} />} />
             </Routes>
+            <ScrollToTop />
         </BrowserRouter>
     )
 }

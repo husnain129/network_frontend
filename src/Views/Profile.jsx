@@ -6,24 +6,9 @@ import HomeCard from '../Components/Common/HomeCard'
 import Svgs from '../Components/Svgs'
 
 const Profile = () => {
+    const [editProfile, setEditProfile] = useState(false)
     const [HomeSection, setHomeSection] = useState('All')
-    const Home_Card_Data = [
-        { 'img': '/assets/images/card-img-1.jpg' },
-        { 'img': '/assets/images/card-img-2.jpg' },
-        { 'img': '/assets/images/card-img-3.jpg' },
-        { 'img': '/assets/images/card-img-4.jpg' },
-        { 'img': '/assets/images/card-img-5.jpg' },
-        { 'img': '/assets/images/card-img-6.jpg' },
-        { 'img': '/assets/images/card-img-7.jpg' },
-        { 'img': '/assets/images/card-img-8.jpg' },
-        { 'img': '/assets/images/card-img-9.jpg' },
-        { 'img': '/assets/images/card-img-10.jpg' },
-        { 'img': '/assets/images/card-img-12.jpg' },
-        { 'img': '/assets/images/card-img-13.jpg' },
-        { 'img': '/assets/images/card-img-14.jpg' },
-        { 'img': '/assets/images/card-img-15.jpg' },
-        { 'img': '/assets/images/card-img-16.jpg' },
-    ]
+
     return (
         <>
             <Header />
@@ -40,10 +25,14 @@ const Profile = () => {
                     <div className='pt-[4rem]'>
                         <div className='flex items-center justify-end gap-3'>
                             <Button text='Hire Me' />
+                            <Button text='Edit Profile' onClick={() => {
+                                setEditProfile(true)
+                            }} />
                             <Button text='Follow' outline />
                             <div className='h-[2.5rem] w-[2.5rem] rounded-full border border-[#7B7B7B] flex items-center justify-center'>
                                 <Svgs.ThreeDots />
                             </div>
+
                         </div>
                         <div className='flex flex-col gap-3'>
                             <div className='flex items-center gap-[1.5rem]'>
@@ -52,7 +41,7 @@ const Profile = () => {
                                         <Svgs.Verified />
                                     </span>
                                 </h1>
-                                <Button text='Follow' disabled />
+                                <Button text='Follows You' disabled />
                             </div>
                             <div className='flex items-center gap-4 text-[#7B7B7B]'>
                                 <h1 className='font-semibold text-sm'>@anasshafi23</h1>
@@ -99,8 +88,8 @@ const Profile = () => {
                         </div>
                     </div>
                     <section>
-                        <div className='container py-[2rem] pt-[5rem]'>
-                            <div className='border-[#8E8E8E] border w-fit mx-auto px-[2rem] py-[0.5rem] rounded-md flex items-center gap-6 text-lg text-[#35424B] lg:justify-center overflow-auto whitespace-nowrap'>
+                        <div className='py-[2rem] pt-[5rem]'>
+                            <div className='border w-fit mx-auto px-[2rem] py-[0.5rem] rounded-md flex items-center gap-5 lg:gap-[3rem] text-lg text-[#35424B] justify-center overflow-auto whitespace-nowrap flex-wrap'>
                                 <p className={`cursor-pointer ${HomeSection == "All" && "text-[#248489]"}`} onClick={() => { setHomeSection('All') }}>All</p>
                                 <p className={`cursor-pointer ${HomeSection == "Mobile" && "text-[#248489]"}`} onClick={() => { setHomeSection('Mobile') }}>Mobile App Projects</p>
                                 <p className={`cursor-pointer ${HomeSection == "Website" && "text-[#248489]"}`} onClick={() => { setHomeSection('Website') }}>Website Projects</p>
@@ -108,29 +97,17 @@ const Profile = () => {
                             </div>
                             {
                                 HomeSection == 'All' && <div className='relative slide-in-bottom grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 py-[3rem]'>
-                                    {
-                                        Home_Card_Data.map(data => {
-                                            return <HomeCard img={data.img} />
-                                        })
-                                    }
+                                    <HomeCard />
                                 </div>
                             }
                             {
                                 HomeSection == 'Mobile' && <div className='relative slide-in-bottom grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 py-[3rem]'>
-                                    {
-                                        Home_Card_Data.map(data => {
-                                            return <HomeCard img={data.img} />
-                                        })
-                                    }
+                                    <HomeCard />
                                 </div>
                             }
                             {
                                 HomeSection == 'Website' && <div className='relative slide-in-bottom grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 py-[3rem]'>
-                                    {
-                                        Home_Card_Data.map(data => {
-                                            return <HomeCard img={data.img} />
-                                        })
-                                    }
+                                    <HomeCard />
                                 </div>
                             }
                             {

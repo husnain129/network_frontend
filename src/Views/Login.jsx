@@ -34,7 +34,7 @@ const Login = () => {
                     <h1 className='text-white font-bold text-[3rem]'>
                         Welcome Back{' '}
                         <br className='hidden lg:block' />
-                        to Network
+                        to Nework
                     </h1>
                     <p className='text-white'>
                         Let's get you all set up so you can verify your personal
